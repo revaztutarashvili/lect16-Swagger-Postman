@@ -19,7 +19,7 @@ public class MainController {
     @DeleteMapping("/delete-animal/{animalIndex}")
     public void DeleteAnimal(@PathVariable("animalIndex") Integer index) {
         if (index < animals.size() && index > -1) {
-            animals.remove(index);
+            animals.remove((int)index);
         }
     }
 
